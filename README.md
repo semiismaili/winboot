@@ -5,6 +5,7 @@ Setup:
 2. run winboot -h in terminal to read the Configuration Notes, then run winboot.
 
 Configuration Notes:
+
 ---------------------------Winboot Version 1.0.5---------------------------------
 
 Winboot needs a little configuration change in /etc/default/grub to work:
