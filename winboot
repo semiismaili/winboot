@@ -12,11 +12,19 @@ echo "Step 3: Run winboot again"
 echo " "
 echo "Disclaimer: Winboot assumes Windows is the second entry on your grub menu (entry number 1, counting from 0), "
 echo "            if your setup is different, please change line 19 in the source code to match your preferences! "
-echo ""
+echo " "
 echo "-----------------------------------------------------------------------------------"
 else
 echo "Enter password to reboot to Windows!"
 sudo grub-reboot 1 #winboot assumes Windows is the second entry on your grub menu, change the parameter to your own Windows entry number (counting from 0)
-echo "Rebooting to Windows..."
+counter=3
+echo -n "Rebooting to Windows in "
+while [ "$counter" -gt 1 ]
+do
+echo  -n "$counter..."
+counter=$(($counter - 1))
+sleep 1
+done
+echo "1"
 reboot
 fi
