@@ -1,5 +1,6 @@
 # winboot
 command-line program useful for dual boot setups
+
 Setup:
 1. copy winboot to your /bin/ directory 
 2. run winboot -h in terminal to read the Configuration Notes, then run winboot.
