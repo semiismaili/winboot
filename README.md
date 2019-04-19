@@ -5,10 +5,15 @@ Reboot directly into Windows from your linux Session wthout having to select it 
 
 Setup:
           1. Open up a terminal 
+          
           2. Run the following commands:
+                    
                     git clone https://github.com/semiismaili/Winboot.git
+                    
                     chmod 755 winboot_installer
+                    
                     ./winboot_installer
+                    
 
 Configuration Notes:
 
