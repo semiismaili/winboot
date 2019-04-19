@@ -11,6 +11,8 @@ Setup:
                     
                     git clone https://github.com/semiismaili/Winboot.git
                     
+                    cd Winboot
+                    
                     chmod 755 winboot
                     
                     ./winboot -install
