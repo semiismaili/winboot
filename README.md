@@ -4,8 +4,11 @@ command-line program useful for dual boot setups
 Reboot directly into Windows from your linux Session wthout having to select it from grub!
 
 Setup:
-          1. copy winboot to your /bin/ directory 
-          2. run winboot -h in terminal to read the Configuration Notes, then run winboot.
+          1. Open up a terminal 
+          2. Run the following commands:
+                    git clone https://github.com/semiismaili/Winboot.git
+                    chmod 755 winboot_installer
+                    ./winboot_installer
 
 Configuration Notes:
 
