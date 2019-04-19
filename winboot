@@ -11,10 +11,20 @@ echo "Step 2: Change the GRUB_DEFAULT parameter so it says GRUB_DEFAULT=\"saved\
 echo "Step 3: Run winboot again"
 echo " "
 echo "Disclaimer: Winboot assumes Windows is the second entry on your grub menu (entry number 1, counting from 0), "
-echo "            if your setup is different, please change line 19 in the source code to match your preferences! "
+echo "            if your setup is different, please change line 29 in the source code to match your preferences! "
 echo " "
 echo "-----------------------------------------------------------------------------------"
-else
+elif [ "$1" = "-install" ] #intallation
+then
+chmod 755 winboot
+sudo cp winboot /bin
+cd ..
+rm -rf Winboot
+echo "  "
+echo "Winboot is succesfully installed!"
+winboot -h
+exit
+else #actual work
 echo "Enter password to reboot to Windows!"
 sudo grub-reboot 1 #winboot assumes Windows is the second entry on your grub menu, change the parameter to your own Windows entry number (counting from 0)
 counter=3
