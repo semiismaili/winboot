@@ -4,6 +4,7 @@ command-line program useful for dual boot setups
 Reboot directly into Windows from your linux Session wthout having to select it from grub!
 
 Setup:
+
           1. Open up a terminal 
           
           2. Run the following commands:
