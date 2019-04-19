@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 #cd $HOME
-#git clone https://github.com/semiismaili/Winboot.git
-#cd Winboot
+git clone https://github.com/semiismaili/Winboot.git
+cd Winboot
 chmod 755 winboot
 sudo cp winboot /bin
 cd ..
