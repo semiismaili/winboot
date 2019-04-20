@@ -50,6 +50,5 @@ done
 echo "1"
 reboot
 else
-then
 echo "Invalid argument"
 fi
