@@ -8,21 +8,32 @@ echo " "
 echo "Winboot needs a little configuration change in /etc/default/grub to work:"
 echo "Step 1: Edit the grub configuration file by running: sudo gedit /etc/default/grub"
 echo "Step 2: Change the GRUB_DEFAULT parameter so it says GRUB_DEFAULT=\"saved\" then save&exit"
-echo "Step 3: Run winboot again"
+
 echo " "
 echo "Disclaimer: Winboot assumes Windows is the second entry on your grub menu (entry number 1, counting from 0), "
-echo "            if your setup is different, please change line 29 in the source code to match your preferences! "
+echo "            if your setup is different, please change line 28 in the source code to match your preferences! "
 echo " "
 echo "-----------------------------------------------------------------------------------"
-elif [ "$1" = "-install" ] #intallation
+elif [ "$1" = "-install" ] #installation
 then
 chmod 755 winboot
 sudo cp winboot /bin
 cd ..
 rm -rf Winboot
 echo "  "
-echo "Winboot is succesfully installed!"
+echo "Latest Winboot version is succesfully installed!"
 winboot -h
+exit
+elif  [ "$1" = "-update" ] #update to latest version
+then
+git clone https://github.com/semiismaili/Winboot.git
+cd Winboot
+chmod 755 winboot
+sudo cp winboot /bin
+cd ..
+rm -rf Winboot
+echo "  "
+echo "Latest Winboot version is succesfully installed!"
 exit
 else #actual work
 echo "Enter password to reboot to Windows!"
