@@ -32,7 +32,7 @@ rm -rf Winboot
 echo "  "
 echo "Latest Winboot version is succesfully installed!"
 winboot -h
-exit
+exit 1
 elif  [ "$1" = "-update" ] #update to latest version
 then
 git clone https://github.com/semiismaili/Winboot.git
@@ -43,7 +43,7 @@ cd ..
 rm -rf Winboot
 echo "  "
 echo "Latest Winboot version is succesfully installed!"
-exit
+exit 1
 elif [ $# -eq 0 ] 
 then #actual work
 echo "Enter password to reboot to Windows!"
