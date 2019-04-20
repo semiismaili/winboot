@@ -1,7 +1,7 @@
 # winboot
 useful for dual boot setups
 
-####### Winboot is a shell script that reboots directly into Windows from your Linux session, without having to select it from the grub menu. For all those times you forget to do it and your grub timer runs out.
+**Winboot is a shell script that reboots directly into Windows from your Linux session, without having to select it from the grub menu. For all those times you forget to do it and your grub timer runs out.
 
 Installation:
 -
