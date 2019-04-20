@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-#cd $HOME
+
 git clone https://github.com/semiismaili/Winboot.git
 cd Winboot
 chmod 755 winboot
@@ -7,6 +7,6 @@ sudo cp winboot /bin
 cd ..
 rm -rf Winboot
 echo "  "
-echo "Winboot is succesfully installed!"
+echo "Latest Winboot version is succesfully installed!"
 winboot -h
 exit
