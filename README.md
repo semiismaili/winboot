@@ -28,6 +28,6 @@ Winboot needs a little configuration change in /etc/default/grub to work:
 
 Disclaimer: 
 Winboot assumes Windows is the second entry on your grub menu (entry number 1, counting from 0), 
-if your setup is different, please change line 28 in the source code to match your preferences! 
+if your setup is different, please change line 50 in the source code to match your preferences! 
 
 -----------------------------------------------------------------------------------
