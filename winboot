@@ -3,7 +3,7 @@
 
 if [ "$1" = "-h" ]
 then
-echo "---------------------------Winboot Version 1.0.5---------------------------------"
+echo "-----------------------------------Winboot Version 2.0.0---------------------------------------"
 echo " "
 echo "Usage:"
 echo " "
@@ -22,7 +22,7 @@ echo "Disclaimer:"
 echo "Winboot assumes Windows is the second entry on your grub menu (entry number 1, counting from 0), "
 echo "if your setup is different, please change line 50 in the source code to match your preferences! "
 echo " "
-echo "-----------------------------------------------------------------------------------"
+echo "--------------------------------------------------------------------------------------------------"
 elif [ "$1" = "-install" ] #installation
 then
 chmod 755 winboot
