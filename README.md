@@ -20,7 +20,7 @@ Installation:
 
 Configuration Notes:
 
----------------------------Winboot Version 2.0.0---------------------------------
+-----------------------------------Winboot Version 2.0.0----------------------------------------
 
 Winboot needs a little configuration change in /etc/default/grub to work:
 
@@ -39,5 +39,5 @@ Usage:
           -install (initial one-time only installation)
           -update (updates to latest version from repository)
 
------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 
