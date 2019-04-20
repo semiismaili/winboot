@@ -47,7 +47,8 @@ exit 1
 elif [ $# -eq 0 ] 
 then #actual work
 echo "Enter password to reboot to Windows!"
-sudo grub-reboot 1 #winboot assumes Windows is the second entry on your grub menu, change the parameter to your own Windows entry number (counting from 0)
+sudo grub-reboot 1 #winboot assumes Windows is the second entry on your grub menu, 
+                    #change 1 to your own Windows entry number (counting from 0)
 counter=3
 echo -n "Rebooting to Windows in "
 while [ "$counter" -gt 1 ]
