@@ -34,12 +34,15 @@ Disclaimer:
 
 Usage:
 -
-
-          -h (brings this screen)
+          winboot (reboots to windows)
           
-          -install (initial one-time only installation)
+          winboot -h (brings this screen)
           
-          -update (updates to latest version from repository)
+          winboot -update (updates to latest version from repository)
+          
+          winboot -install (initial one-time only installation)
+          
+          
 
 
 
