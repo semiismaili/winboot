@@ -27,6 +27,7 @@ elif [ "$1" = "-install" ] #installation
 then
 chmod 755 winboot
 sudo cp winboot /bin
+sudo cp entry.cfg /bin
 cd ..
 rm -rf Winboot
 echo "  "
@@ -39,15 +40,28 @@ git clone https://github.com/semiismaili/Winboot.git
 cd Winboot
 chmod 755 winboot
 sudo cp winboot /bin
+sudo cp entry.cfg /bin
 cd ..
 rm -rf Winboot
 echo "  "
 echo "Latest Winboot version is succesfully installed!"
 exit 1
+elif [ "$1" = "-set" ] #entry set
+then
+       if [ "$2" -ge 0 ] 
+       then
+       echo "Second argument should be a number!"
+       exit 1
+       else
+       entry=$2
+       echo $entry > entry.cfg
+       fi
+exit 1
 elif [ $# -eq 0 ] 
 then #actual work
 echo "Enter password to reboot to Windows!"
-sudo grub-reboot 1 #winboot assumes Windows is the second entry on your grub menu, 
+$entry=`cat entry.cfg`
+sudo grub-reboot $entry #winboot assumes Windows is the second entry on your grub menu, 
                     #change 1 to your own Windows entry number (counting from 0)
 counter=3
 echo -n "Rebooting to Windows in "
