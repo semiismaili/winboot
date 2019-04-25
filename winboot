@@ -52,6 +52,7 @@ then
        then
        entry=$2
        echo $entry > entry.cfg
+       echo "Windows entry is set to $entry"
        exit 1
        else
         echo "Second argument should be a number!"
