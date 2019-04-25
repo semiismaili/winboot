@@ -50,11 +50,11 @@ elif [ "$1" = "-set" ] #entry set
 then
        if [ "$2" -ge 0 ] 
        then
-       echo "Second argument should be a number!"
-       exit 1
-       else
        entry=$2
        echo $entry > entry.cfg
+       exit 1
+       else
+        echo "Second argument should be a number!"
        fi
 exit 1
 elif [ $# -eq 0 ] 
