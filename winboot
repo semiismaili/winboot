@@ -51,7 +51,7 @@ then
        if [ "$2" -ge 0 ] 
        then
        entry=$2
-       echo $entry > /bin/entry.cfg
+       sudo echo $entry > /bin/entry.cfg
        echo "Windows entry is set to $entry"
        exit 1
        else
@@ -61,7 +61,7 @@ exit 1
 elif [ $# -eq 0 ] 
 then #actual work
 echo "Enter password to reboot to Windows!"
-$entry=`cat entry.cfg`
+$entry=`sudo cat entry.cfg`
 sudo grub-reboot $entry #winboot assumes Windows is the second entry on your grub menu, 
                     #change 1 to your own Windows entry number (counting from 0)
 counter=3
