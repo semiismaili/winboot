@@ -60,8 +60,8 @@ exit 1
 elif [ $# -eq 0 ] 
 then #actual work
 echo "Enter password to reboot to Windows!"
-$entry=`sudo cat entry.cfg`
-sudo grub-reboot $entry #winboot assumes Windows is the second entry on your grub menu, 
+entry=`sudo cat /bin/entry.cfg`
+sudo grub-reboot $entry 
                     #run sudo winboot -set <your windows entry number> 
 counter=3
 echo -n "Rebooting to Windows in "
