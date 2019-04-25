@@ -16,17 +16,16 @@ echo " "
 echo "Winboot needs a little configuration change in /etc/default/grub to work:"
 echo "Step 1: Edit the grub configuration file by running: sudo gedit /etc/default/grub"
 echo "Step 2: Change the GRUB_DEFAULT parameter so it says GRUB_DEFAULT=\"saved\" then save&exit"
-
-echo " "
-echo "Disclaimer:" 
-echo "Winboot assumes Windows is the second entry on your grub menu (entry number 1, counting from 0), "
-echo "if your setup is different, please change line 50 in the source code to match your preferences! "
+ 
 echo " "
 echo "--------------------------------------------------------------------------------------------------"
 elif [ "$1" = "-install" ] #installation
 then
 chmod 755 winboot
 sudo cp winboot /bin
+read -p "Enter your Windows entry in the Grub Menu (Enter 0 if Windows is first, 1-Windows is second, 2-Windows is third etc) : " entry
+       sudo echo $entry > entry.cfg
+       echo "Windows entry is set to $entry, run {sudo winboot -set <entry number>} if you ever need to change it!"
 sudo cp entry.cfg /bin
 cd ..
 rm -rf Winboot
@@ -40,7 +39,7 @@ git clone https://github.com/semiismaili/Winboot.git
 cd Winboot
 chmod 755 winboot
 sudo cp winboot /bin
-sudo cp entry.cfg /bin
+#sudo cp entry.cfg /bin
 cd ..
 rm -rf Winboot
 echo "  "
@@ -63,7 +62,7 @@ then #actual work
 echo "Enter password to reboot to Windows!"
 $entry=`sudo cat entry.cfg`
 sudo grub-reboot $entry #winboot assumes Windows is the second entry on your grub menu, 
-                    #change 1 to your own Windows entry number (counting from 0)
+                    #run sudo winboot -set <your windows entry number> 
 counter=3
 echo -n "Rebooting to Windows in "
 while [ "$counter" -gt 1 ]
