@@ -25,7 +25,7 @@ Winboot needs a little configuration change in /etc/default/grub to work:
 
     Step 1: Edit the grub configuration file by running: sudo gedit /etc/default/grub
 
-    Step 2: Change the GRUB_DEFAULT parameter so it says GRUB_DEFAULT=\"saved\" then save&exit
+    Step 2: Change the GRUB_DEFAULT parameter so it says GRUB_DEFAULT="saved" then save&exit
 
 Disclaimer: 
 -
