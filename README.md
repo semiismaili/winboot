@@ -18,21 +18,6 @@ Installation:
                     ./winboot -install
                     
 
-Configuration Notes:
--
-Winboot needs a little configuration change in /etc/default/grub to work:
-
-
-    Step 1: Edit the grub configuration file by running: sudo gedit /etc/default/grub
-
-    Step 2: Change the GRUB_DEFAULT parameter so it says GRUB_DEFAULT="saved" then save&exit
-
-Disclaimer: 
--
-  Winboot assumes Windows is the second entry on your grub menu (entry number 1, counting from 0), 
- if your setup is different, please run:
-                             
-           sudo winboot -set <your_windows_entry_number>
 
 Usage:
 -
@@ -43,6 +28,21 @@ Usage:
           winboot -update (updates to latest version from repository)
           
           winboot -install (initial one-time only installation)
+
+          sudo winboot -set <your_entry_number>  (changes the windows entry number to <your_entry_number>)
+          
+  
+Configuration Troubleshooter:
+-
+Winboot may need a little configuration change in /etc/default/grub to work, if winboot doesn't reboot you into Windows
+please try the following steps:
+
+
+    Step 1: Edit the grub configuration file by running: sudo gedit /etc/default/grub
+
+    Step 2: Change the GRUB_DEFAULT parameter so it says GRUB_DEFAULT="saved" then save&exit
+
+
           
           
 
