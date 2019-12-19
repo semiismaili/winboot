@@ -27,7 +27,7 @@ sudo cp winboot /bin
 read -p "Enter your Windows entry in the Grub Menu (Enter 0 if Windows is first, 1-Windows is second, 2-Windows is third etc) : " entry
        sudo echo $entry > entry.cfg
        echo "Windows entry is set to $entry, run {sudo winboot -set <entry number>} if you ever need to change it!"
-sudo cp entry.cfg /bin
+sudo cp entry.cfg /etc
 cd ..
 rm -rf Winboot
 echo "  "
@@ -40,7 +40,7 @@ git clone https://github.com/semiismaili/Winboot.git
 cd Winboot
 chmod 755 winboot
 sudo cp winboot /bin
-#sudo cp entry.cfg /bin
+#sudo cp entry.cfg /etc
 cd ..
 rm -rf Winboot
 echo "  "
@@ -51,7 +51,7 @@ then
        if [ "$2" -ge 0 ] 
        then
        entry=$2
-       sudo echo $entry > /bin/entry.cfg
+       sudo echo $entry > /etc/entry.cfg
        echo "Windows entry is set to $entry"
        exit 1
        else
