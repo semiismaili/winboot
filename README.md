@@ -43,8 +43,9 @@ please try the following steps:
     Step 2: Change the GRUB_DEFAULT parameter so it says GRUB_DEFAULT="saved" then save&exit
 
 
-
-**Send some love:** [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://ko-fi.com/semiismaili)
+Send some love:
+-
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://ko-fi.com/semiismaili)
 
           
           
